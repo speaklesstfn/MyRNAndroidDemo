@@ -26,6 +26,7 @@ public class MyRNActivity extends AppCompatActivity implements DefaultHardwareBa
         super.onCreate(savedInstanceState);
 
         mReactRootView = new ReactRootView(this);
+
         mReactInstanceManager = ReactInstanceManager.builder().setApplication(getApplication()).setBundleAssetName("index.android.bundle")
                 .setJSMainModuleName("index.android").addPackage(new MainReactPackage()).addPackage(new MyReactPackage())
                 .setUseDeveloperSupport(BuildConfig.DEBUG).setInitialLifecycleState(LifecycleState.RESUMED).build();
